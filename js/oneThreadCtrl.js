@@ -16,5 +16,5 @@ app.controller('oneThreadCtrl', function($scope, threadRef, commentsRef, $fireba
         $scope.username = '';
     };
    
-
+  
 });

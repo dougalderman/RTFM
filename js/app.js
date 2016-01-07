@@ -33,6 +33,23 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                     return threadService.getComments($stateParams.threadId);
                 }
             }
-        });
+        })
+       .state('Login', {
+            templateUrl: 'views/login.html',
+            url: '/login',
+            controller: 'loginCtrl'
+            
+        })
+       .state('Signup', {
+            templateUrl: 'views/signup.html',
+            url: '/signup',
+            controller: 'signupCtrl'
+        })
+       .state('Logout', {
+            url: '/logout',
+            controller: function(userService) {
+                return userService.logout();
+        },
+      });
 
 });
